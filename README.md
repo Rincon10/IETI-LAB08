@@ -70,4 +70,7 @@
     <img src="./resources/img/02-AppTest.jpg" />
 
 12. Write tests for your components
+
+    <img src="./resources/img/03-more-test.jpg" />
+
 13. Run **_npx jest --coverage_** to always check for the code coverage.
