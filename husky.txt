@@ -14,7 +14,6 @@ npx husky install
 }
 
 npm set-script prepare "husky install"
-
-
+npm run lint:fix && npx pretty-quick --staged
 
 npx husky add .husky/pre-commit "npm run lint:fix && npx pretty-quick --staged"

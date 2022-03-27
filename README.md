@@ -1,11 +1,12 @@
 # CodeLab
 
 1. Add the following dependencies:
+
     ```
     npm i -D jest enzyme @wojtekmaj/enzyme-adapter-react-17 @types/jest
     ```
 
-<img src="./resources/img/01-Installing-Enzyme.jpg" />
+    <img src="./resources/img/01-Installing-Enzyme.jpg" />
 
 2. Add an Enzyme Adapter to work with React ( Create a file on the root called **_setupTests.js_**, this will run before each test you write ):
 
@@ -65,5 +66,8 @@
     ```
 
 11. To run your tests run **_npm test_**, check for results and make sure those pass
+
+    <img src="./resources/img/02-AppTest.jpg" />
+
 12. Write tests for your components
 13. Run **_npx jest --coverage_** to always check for the code coverage.
