@@ -1,33 +1,33 @@
-import { taskApiClient } from "components/services/taskApiClient";
-import { useEffect, useState } from "react";
+import { taskApiClient } from '../../components/services/taskApiClient';
+import { useEffect, useState } from 'react';
 
 const useHomePage = () => {
-  const [tasks, setTasks] = useState([]);
-  const [todo, setTodo] = useState([]);
-  const [doing, setDoing] = useState([]);
-  const [done, setDone] = useState([]);
+    const [tasks, setTasks] = useState([]);
+    const [todo, setTodo] = useState([]);
+    const [doing, setDoing] = useState([]);
+    const [done, setDone] = useState([]);
 
-  const updateValues = (status, val) => {
-    if (status === "TODO") setTodo(val);
-    else if (status === "DOING") setDoing(val);
-    else {
-      setDone(val);
-    }
-  };
+    const updateValues = (status, val) => {
+        if (status === 'TODO') setTodo(val);
+        else if (status === 'DOING') setDoing(val);
+        else {
+            setDone(val);
+        }
+    };
 
-  useEffect(() => {
-    taskApiClient.getTaskByUser().then((listOfTasks) => {
-      const statusArray = ["TODO", "DOING", "DONE"];
+    useEffect(() => {
+        taskApiClient.getTaskByUser().then(listOfTasks => {
+            const statusArray = ['TODO', 'DOING', 'DONE'];
 
-      setTasks(listOfTasks);
-      statusArray.forEach((st) => {
-        const val = listOfTasks.filter((stat) => stat.status === st);
-        updateValues(st, val);
-      });
-    });
-  }, []);
+            setTasks(listOfTasks);
+            statusArray.forEach(st => {
+                const val = listOfTasks.filter(stat => stat.status === st);
+                updateValues(st, val);
+            });
+        });
+    }, []);
 
-  return { tasks, todo, doing, done };
+    return { tasks, todo, doing, done };
 };
 
 export default useHomePage;

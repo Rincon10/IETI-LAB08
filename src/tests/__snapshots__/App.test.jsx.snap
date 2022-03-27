@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas para el componente <App/> Debe de renderizar el componente 1`] = `
+<main
+  id="main-container"
+>
+  <ContextProvider
+    value={
+      Object {
+        "dispatchTheme": [Function],
+        "theme": Object {
+          "isDarkMode": false,
+        },
+      }
+    }
+  >
+    <ContextProvider
+      value={
+        Object {
+          "dispatch": [Function],
+          "user": Object {
+            "logged": false,
+          },
+        }
+      }
+    >
+      <AppRouter />
+    </ContextProvider>
+  </ContextProvider>
+</main>
+`;
