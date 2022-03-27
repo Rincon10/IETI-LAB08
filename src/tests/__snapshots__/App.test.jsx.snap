@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pruebas para el componente <App/> Debe de renderizar el componente 1`] = `
+exports[`Test to the <App/> component Should render the <App/> component propertly 1`] = `
 <main
   id="main-container"
 >

@@ -10,7 +10,7 @@ import validateInfoLogin from '../../components/helpers/validateInfoLogin ';
 import useFormLogin from '../../components/hooks/useFormLogin';
 import '../../assets/css/form.css';
 
-const Form = ({ bgcolor, title }) => {
+const Form = ({ bgcolor = '#f00', title = 'Default title' }) => {
     const { handleSubmit, handleChange, errors } =
         useFormLogin(validateInfoLogin);
 

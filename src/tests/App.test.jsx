@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { describe, expect, test } from '@jest/globals';
 import App from '../App';
 
-describe('Pruebas para el componente <App/>', () => {
+describe('Test to the <App/> component', () => {
     var wrapper = shallow(<App />);
 
     // before running each test
@@ -11,7 +11,7 @@ describe('Pruebas para el componente <App/>', () => {
         wrapper = shallow(<App />);
     });
 
-    test('Debe de renderizar el componente', () => {
+    test('Should render the <App/> component propertly', () => {
         expect(wrapper).toMatchSnapshot();
     });
 });
