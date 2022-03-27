@@ -56,7 +56,7 @@ const useFormLogin = (
         }
     };
 
-    return { handleChange, handleSubmit, errors };
+    return { handleChange, handleSubmit, errors, data };
 };
 
 export default useFormLogin;
